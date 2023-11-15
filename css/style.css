@@ -11,3 +11,10 @@ main {
   height: 700px; /* debug */
   background-color: darkgrey; /* debug */
 }
+
+.cell {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  border: 1px solid black;
+  background-color: aqua;
+}
