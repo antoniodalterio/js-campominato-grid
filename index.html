@@ -26,14 +26,24 @@
       </div>
       <!-- cpntenitore col 1 -->
       <!-- col 2 -->
-      <button class="border-1 rounded px-5 py-0" id="bottone-play">Play</button>
+      <div class="d-flex col-auto">
+        <label for="difficolta" class="me-1">Difficoltà:</label>
+        <select name="difficoltà" id="difficolta" class="me-3 rounded">
+          <option value="100">1</option>
+          <option value="81">2</option>
+          <option value="49">3</option>
+        </select>
+        <button class="border-1 rounded px-5 py-0" id="bottone-play">
+          Play
+        </button>
+      </div>
       <!-- col 2 -->
     </header>
     <!-- header -->
 
     <!-- main -->
     <main class="flex-grow-1 d-flex align-items-center justify-content-center">
-      <div class="board d-flex flex-wrap"></div>
+      <div class="board d-flex flex-wrap d-none"></div>
     </main>
     <!-- main -->
 

@@ -18,6 +18,12 @@ function cellFunction(tag, className, content) {
   return element;
 }
 
+function valore(tag) {
+  let difficoltaValore = document.querySelector(tag);
+  difficoltaValore = difficoltaValore.value;
+  return difficoltaValore;
+}
+
 /* 
 Funzioni
 */
@@ -27,14 +33,18 @@ let cell = '';
 const btnPlay = document.getElementById('bottone-play');
 
 // Ciclo creazione elementi nel document html
-for (let i = 1; i <= 100; i++) {
-  cell = cellFunction('div', 'cell', i);
-  board.append(cell);
-  console.log(cell);
-}
 
 // eventoi al click del bottone
 
 btnPlay.addEventListener('click', function (e) {
   board.classList.toggle('d-none');
+
+  const numeroValore = valore('select');
+  console.log(numeroValore);
+
+  for (let i = 1; i <= numeroValore; i++) {
+    cell = cellFunction('div', 'cell', i);
+    board.append(cell);
+    console.log(cell);
+  }
 });
