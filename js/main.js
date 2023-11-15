@@ -1,14 +1,33 @@
 'use strict';
 
-// Funzioni
+/* 
+Funzioni
+*/
+
+// Funzione Creazione elementi nel document
+
+function cellFunction(tag, className, content) {
+  const element = document.createElement(tag);
+  element.append(content);
+  element.classList.add(className);
+  return element;
+}
+
+/* 
+Funzioni
+*/
 
 const board = document.querySelector('.board');
+let cell = '';
 
 for (let i = 1; i <= 100; i++) {
-  const cell = document.createElement('div');
-  cell.append(i);
-  cell.classList.add('cell');
-  console.log(cell);
-
+  cell = cellFunction('div', 'cell', i);
   board.append(cell);
+  console.log(cell);
 }
+
+const btnPlay = document.getElementById('bottone-play');
+
+btnPlay.addEventListener('click', function (e) {
+  board.classList.toggle('d-none');
+});
